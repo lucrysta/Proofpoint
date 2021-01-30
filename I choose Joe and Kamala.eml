@@ -1,0 +1,806 @@
+Delivered-To: proofpointcse498@gmail.com
+Received: by 2002:a67:1985:0:0:0:0:0 with SMTP id 127csp3861195vsz;
+        Tue, 27 Oct 2020 13:27:21 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJx0/i2N21C9MwX48SOn3M3yu8DBaoMlURDIOzPGBHl4YT+PpEgdpK+BfomlOlavBOmI89dB
+X-Received: by 2002:aed:216f:: with SMTP id 102mr3798833qtc.126.1603830441247;
+        Tue, 27 Oct 2020 13:27:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1603830441; cv=none;
+        d=google.com; s=arc-20160816;
+        b=CYqPqEkVe3X5BC+Bd2yPgKlB5V+xpKhVhvgZqUeFmYzU7RmavpyXLH1JENGwsjwQbL
+         AiuRjhUJxvkTltiGedmIepzxMEopCVc71Qoib6xSZFXwBXhRwVgAljSBeirofnyEpc8Y
+         XI/B3HiXYGLJz7N/cKneSoLYAa2iOFElzT5BUVdMT4FUD/vpSHYK1hw1XzjwyFzN9FAq
+         c65JxE963wmbwPYqVFDPrQxjZigy6JgNZHw5hRiIahlZ1sq7AFc25agyuI85GlGNK0VU
+         jU8MbOOXnSHki7B+mJKAKqoH87j+dlg9/hzaDg6vM+qB74/5oBSCdxPWwsus1TBOvWWg
+         zMGA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :message-id:subject:reply-to:from:to:date:dkim-signature;
+        bh=3g6U6m0E5WHQiaIREVHmSQnlr9KsOQJBYPjT0fN1S6c=;
+        b=1AMta0CVhMU1DHDxC0ZYBhiyM1nYg8w6hCN78Eu1BY5mODecnGNEir5pTwI9h/P+Uf
+         vR/4L9WRMZw/tH0SSAiprm3bjAtbIq42/55J1IufNLeBk2DlD26bMy/vQFrEjTJR2dDT
+         udaD5EDk+N97xog949c7+lY4U3ApQElF6sQdDfUGnRLB9C+oL5ttsxUKpEnl+nI+hvTE
+         3wgUY8+t6FBeS9a7FVRkn6UYgktWR/pqnQsnNuAGsmlJFlK0H4cd/yhoSsgErFFuePRj
+         3SG/XsFqAmv7lFuNUAo+J4qGewbsCsczfd/M+YNpsdSeqnRJKiXyA0dXU2yuum+OtgV1
+         AqkQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@joebiden.com header.s=joebidenkey header.b=cpb8qDA0;
+       spf=pass (google.com: domain of bahtrwohb1ovxengofxqbffdvvdqvljxaf8cufm9rrykclbfda0iqazavqeixxmgdlhzxhpucl5rcafbdww@bounce.bluestatedigital.com designates 66.151.230.130 as permitted sender) smtp.mailfrom=BAhTRwoHB1oVXENGOFxQBFFdVVdQVlJXAF8CUFM9RRYKClBFDA0IQAZAVQEIXXMGDlhZXhpUCl5rCAFbDww@bounce.bluestatedigital.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=joebiden.com
+Return-Path: <BAhTRwoHB1oVXENGOFxQBFFdVVdQVlJXAF8CUFM9RRYKClBFDA0IQAZAVQEIXXMGDlhZXhpUCl5rCAFbDww@bounce.bluestatedigital.com>
+Received: from mta-dock-front-10.bluestatedigital.com (mta-dock-front-10.bluestatedigital.com. [66.151.230.130])
+        by mx.google.com with ESMTPS id b1si1356877qkk.152.2020.10.27.13.27.20
+        for <proofpointcse498@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Oct 2020 13:27:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bahtrwohb1ovxengofxqbffdvvdqvljxaf8cufm9rrykclbfda0iqazavqeixxmgdlhzxhpucl5rcafbdww@bounce.bluestatedigital.com designates 66.151.230.130 as permitted sender) client-ip=66.151.230.130;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@joebiden.com header.s=joebidenkey header.b=cpb8qDA0;
+       spf=pass (google.com: domain of bahtrwohb1ovxengofxqbffdvvdqvljxaf8cufm9rrykclbfda0iqazavqeixxmgdlhzxhpucl5rcafbdww@bounce.bluestatedigital.com designates 66.151.230.130 as permitted sender) smtp.mailfrom=BAhTRwoHB1oVXENGOFxQBFFdVVdQVlJXAF8CUFM9RRYKClBFDA0IQAZAVQEIXXMGDlhZXhpUCl5rCAFbDww@bounce.bluestatedigital.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=joebiden.com
+Received: from bounce.bluestatedigital.com (unknown [10.0.210.109])
+	by mta-dock-front-10.bluestatedigital.com (Postfix) with ESMTP id 4CLNXx5DJnz1hw4Y
+	for <proofpointcse498@gmail.com>; Tue, 27 Oct 2020 20:27:13 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=joebiden.com;
+	s=joebidenkey; t=1603830433;
+	bh=3g6U6m0E5WHQiaIREVHmSQnlr9KsOQJBYPjT0fN1S6c=;
+	h=Date:To:From:Reply-to:Subject:List-Unsubscribe;
+	b=cpb8qDA0CvX4VHijqM9bEueDX91RNEZauK1s2t1nfV3rCUFJblvad8wgY1G9kmiYx
+	 +T5g2hI3HidF9/OwqCOO32F+bA4zwcKiDGBgxSwVMEWfRO896Gtsg/lBfKlLtMrvcq
+	 qkrcP4JwESUSZM8m3JGHt1/dB6Zbc2h5tanZajAQ=
+Received: from root 
+	by bounce.bluestatedigital.com with local (PHPMailer);
+	Tue, 27 Oct 2020 20:27:13 +0000
+Date: Tue, 27 Oct 2020 20:27:13 +0000
+To:   <proofpointcse498@gmail.com>
+From: Pete Buttigieg <info@joebiden.com>
+Reply-to: info@joebiden.com
+Subject: I choose Joe and Kamala
+Message-ID: <c22c5ae5e5ef11b710296b7554a49c6b@bounce.bluestatedigital.com>
+X-Mailer: PHPMailer [version 1.71-blue_mailer]
+X-maillist-id: 9ce2deeda7dbf03e
+Feedback-ID: americanposs:main:8473.mailingid:bluestatemail
+X-rpcampaign: americanposs-13898
+X-maillist-guid: BAhTRwoHB1oVXENGOFxQBFFdVVdQVlJXAF8CUFM9RRYKClBFDA0IQAZAVQEIXXMGDlhZXhpUCl5rCAFbDww
+List-Unsubscribe: <https://go.joebiden.com/page/unsubscribe?list-unsubscribe-header=1&email=proofpointcse498%40gmail.com>, <mailto:BAhTRwoHB1oVXENGOFxQBFFdVVdQVlJXAF8CUFM9RRYKClBFDA0IQAZAVQEIXXMGDlhZXhpUCl5rCAFbDww@bounce.bluestatedigital.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_c22c5ae5e5ef11b710296b7554a49c6b"
+
+
+--b1_c22c5ae5e5ef11b710296b7554a49c6b
+Content-Type: text/plain; charset = "utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+(Headshot of Pete Buttigieg)
+
+Folks,
+
+At this moment, our country is making a choice. Americans across the =
+nation are choosing between unity and division. We're choosing between =
+hope and fear.
+=20
+I choose unity and hope. I choose Joe Biden and Kamala Harris.
+=20
+The Biden-Harris administration will get this virus under control, build =
+back a better economy, bring our country together, and deliver a brighter =
+future. And that's not all: we can count on Joe and Kamala to restore =
+values like decency, honesty, fairness, and equality to the White House.
+=20
+Countless people from different backgrounds and with different beliefs are =
+coming together to choose Joe and Kamala because we need real leadership =
+at a moment like this. There's just so much at stake -- health care, =
+racial justice, climate, reproductive rights, and LGBTQ+ equality, and =
+more are on the ballot.
+=20
+I'm proud to support Joe and Kamala, and today I'm asking you to help =
+propel them to victory. Folks, will you commit to making your voice heard =
+and vote as soon as you can?
+
+I WILL VOTE =E2=9E=9E https://iwillvote.com/?partner_campaign=3DJB_EM_IWV_=
+2020.10.27_DO_ev_X__F1_S1_C1__ntl&partner=3Dbfp_org
+
+When we stand together, we can accomplish anything, and I'm so grateful =
+you're in this fight standing with us for a brighter future.
+=20
+Let's do this!
+=20
+Pete Buttigieg
+=20
+P.S. We need all hands on deck so we can win. Click here to sign up to =
+volunteer =E2=9E=9E https://joebiden.com/take-action/?source=3DJB_EM_IWV_2=
+020.10.27_DO_ev_X__F1_S1_C1__ntl
+
+----
+
+PAID FOR BY BIDEN FOR PRESIDENT
+
+This email was sent to proofpointcse498@gmail.com.
+
+To unsubscribe, go to: https://go.joebiden.com/page/content/Unsubscribe
+
+
+
+--b1_c22c5ae5e5ef11b710296b7554a49c6b
+Content-Type: text/html; charset = "utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<?xml encoding=3D"UTF-8"??>
+<html lang=3D"en"><!--HEADER --><head><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Dutf-8"><meta =
+name=3D"&rdquo;x-apple-disable-message-reformatting&rdquo;"><meta =
+http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><title></title><style =
+type=3D"text/css">
+  /* CLIENT-SPECIFIC STYLES */
+
+
+ =20
+  body, table, td, a { -webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; }
+
+   /* RESET STYLES */
+  img { border: 0; height: auto; line-height: 100%; outline: none; =
+text-decoration: none; }
+  body { height: 100% !important; margin: 0 !important; padding: 0 =
+!important; width: 100% !important; }
+
+  /* iOS BLUE LINKS */
+  a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+  }
+
+  /* Generic Hover Class*/
+
+   .link-hover-class:hover, .link-hover-class > *:hover{ color: blue =
+!important;}
+
+  /* Hover Profiles*/
+ =20
+  .Red-Button-btn:hover {
+    background: #bd0f15 !important;
+    -webkit-border-radius:inherit;
+    border-radius:inherit;
+  }
+  .Red-Button-link:hover, .Red-Button-link > *:hover {
+    color: #4361bd !important;
+  }
+  .Blue-Button-btn:hover {
+    background: #141455 !important;
+    -webkit-border-radius:inherit;
+    border-radius:inherit;
+  }
+  .Blue-Button-link:hover, .Blue-Button-link > *:hover {
+    color: #4361bd !important;
+  }
+
+ .Blue-Button-inverse-btn:hover {
+    background: #233f94 !important;
+color: white !important;
+  }
+  .Blue-Button-inverse-link:hover, .Blue-Button-link > *:hover {
+    color: #233f94 !important;
+  }
+
+  /* Hover Toggle Classes */
+
+  .link-hover:hover { text-decoration: none; }
+
+   /* STYLES */
+
+  .gmail-show {
+      height: auto !important;
+      width: auto !important;
+      max-width: none !important;
+      max-height: none !important;
+      overflow: auto !important;
+      visibility: visible !important;
+      display: block !important;
+  }
+
+  /* GMAIL TARGETTING AT A HIGHER BREAKPOINT */
+  @media screen and (max-width: 1200px) {
+      u ~ div .responsive-topbox-item-600 {
+    width: 100% !important;
+    min-width: 100% !important;
+      }
+      u ~ div .mobile-hide-topbox-item-600 {
+    display: none !important;
+      }
+      u ~ div .mobile-topbox-padding-0-600 {
+    padding: 0px !important;
+      }
+      u ~ div .mobile-topbox-padding-5-600 {
+    padding: 5px !important;
+      }
+      u ~ div .mobile-topbox-padding-10-600 {
+    padding: 10px !important;
+      }
+      u ~ div .mobile-topbox-padding-15-600 {
+    padding: 15px !important;
+      }
+      u ~ div .mobile-topbox-padding-20-600 {
+    padding: 20px !important;
+      }
+      u ~ div .mobile-topbox-padding-5-top-item-600 {
+    padding: 5px 5px 3px 5px !important;
+      }
+      u ~ div .mobile-topbox-padding-10-top-item-600 {
+    padding: 10px 10px 5px 10px !important;
+      }
+      u ~ div .mobile-topbox-padding-15-top-item-600 {
+    padding: 15px 15px 8px 15px !important;
+      }
+      u ~ div .mobile-topbox-padding-20-top-item-600 {
+    padding: 20px 20px 10px 20px !important;
+      }
+      u ~ div .mobile-topbox-padding-5-bottom-item-600 {
+    padding: 3px 5px 5px 5px !important;
+      }
+      u ~ div .mobile-topbox-padding-10-bottom-item-600 {
+    padding: 5px 10px 10px 10px !important;
+      }
+      u ~ div .mobile-topbox-padding-15-bottom-item-600 {
+    padding: 8px 15px 15px 15px !important;
+      }
+      u ~ div .mobile-topbox-padding-20-bottom-item-600 {
+    padding: 10px 20px 20px 20px !important;
+      }
+      u ~ div .responsive-topbox-item-480 {
+    width: 100% !important;
+    min-width: 100% !important;
+      }
+      u ~ div .mobile-hide-topbox-item-480 {
+    display: none !important;
+      }
+      u ~ div .mobile-topbox-padding-0-480 {
+    padding: 0px !important;
+      }
+      u ~ div .mobile-topbox-padding-5-480 {
+    padding: 5px !important;
+      }
+      u ~ div .mobile-topbox-padding-10-480 {
+    padding: 10px !important;
+      }
+      u ~ div .mobile-topbox-padding-15-480 {
+    padding: 15px !important;
+      }
+      u ~ div .mobile-topbox-padding-20-480 {
+    padding: 20px !important;
+      }
+      u ~ div .mobile-topbox-padding-5-top-item-480 {
+    padding: 5px 5px 3px 5px !important;
+      }
+      u ~ div .mobile-topbox-padding-10-top-item-480 {
+    padding: 10px 10px 5px 10px !important;
+      }
+      u ~ div .mobile-topbox-padding-15-top-item-480 {
+    padding: 15px 15px 8px 15px !important;
+      }
+      u ~ div .mobile-topbox-padding-20-top-item-480 {
+    padding: 20px 20px 10px 20px !important;
+      }
+      u ~ div .mobile-topbox-padding-5-bottom-item-480 {
+    padding: 3px 5px 5px 5px !important;
+      }
+      u ~ div .mobile-topbox-padding-10-bottom-item-480 {
+    padding: 5px 10px 10px 10px !important;
+      }
+      u ~ div .mobile-topbox-padding-15-bottom-item-480 {
+    padding: 8px 15px 15px 15px !important;
+      }
+      u ~ div .mobile-topbox-padding-20-bottom-item-480 {
+    padding: 10px 20px 20px 20px !important;
+    }
+  }
+
+/* WEBKIT TARGETING MEDIA QUERY / WEBKIT STYLES */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+
+      /* WEBKIT HIDE/SHOW MAGIC */
+      .webkit-show {
+    height: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: auto !important;
+    visibility: visible !important;
+    display: block !important;
+      }
+
+      .webkit-hide {
+    display: none !important;
+      }
+
+      .ptop50 {
+    padding-top: 50px !important;
+      }
+
+      #font-weight-normal {
+    font-weight: normal !important;
+      }
+
+  }
+
+  @media screen and (max-width: 800px) {
+      .img-max {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+      }
+
+      .full-width {
+    max-width: 100% !important;
+      }
+  }
+
+  /* RESPONSIVE STUFF */
+  @media screen and (max-width: 600px) {
+      .responsive-topbox-item-600 {
+    width: 100% !important;
+    min-width: 100% !important;
+      }
+      .mobile-hide-topbox-item-600 {
+    display: none !important;
+      }
+      .mobile-topbox-padding-0-600 {
+    padding: 0px !important;
+      }
+      .mobile-topbox-padding-5-600 {
+    padding: 5px !important;
+      }
+      .mobile-topbox-padding-10-600 {
+    padding: 10px !important;
+      }
+      .mobile-topbox-padding-15-600 {
+    padding: 15px !important;
+      }
+      .mobile-topbox-padding-20-600 {
+    padding: 20px !important;
+      }
+      .mobile-topbox-padding-5-top-item-600 {
+    padding: 5px 5px 3px 5px !important;
+      }
+      .mobile-topbox-padding-10-top-item-600 {
+    padding: 10px 10px 5px 10px !important;
+      }
+      .mobile-topbox-padding-15-top-item-600 {
+    padding: 15px 15px 8px 15px !important;
+      }
+      .mobile-topbox-padding-20-top-item-600 {
+    padding: 20px 20px 10px 20px !important;
+      }
+      .mobile-topbox-padding-5-bottom-item-600 {
+    padding: 3px 5px 5px 5px !important;
+      }
+      .mobile-topbox-padding-10-bottom-item-600 {
+    padding: 5px 10px 10px 10px !important;
+      }
+      .mobile-topbox-padding-15-bottom-item-600 {
+    padding: 8px 15px 15px 15px !important;
+      }
+      .mobile-topbox-padding-20-bottom-item-600 {
+    padding: 10px 20px 20px 20px !important;
+      }
+      .responsive-table {
+    width: 100% !important;
+      }
+      .responsive-table-button {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+      }
+      .mobile-text {
+    font-size: 24px !important;
+    line-height: 26px !important;
+      }
+      .mobile-font-14 {
+    font-size: 14px !important;
+    line-height: 14px !important;
+      }
+      .mobile-font-16 {
+    font-size: 16px !important;
+    line-height: 16px !important;
+      }
+      .mobile-font-18 {
+    font-size: 18px !important;
+    line-height: 18px !important;
+      }
+      .mobile-font-20 {
+    font-size: 20px !important;
+    line-height: 20px !important;
+      }
+      .mobile-font-22 {
+    font-size: 22px !important;
+    line-height: 22px !important;
+      }
+      .mobile-font-25 {
+    font-size: 25px !important;
+    line-height: 25px !important;
+      }
+      .mobile-font-30 {
+    font-size: 30px !important;
+    line-height: 30px !important;
+      }
+      .mobile-font-35 {
+    font-size: 35px !important;
+    line-height: 35px !important;
+      }
+      .mobile-font-40 {
+    font-size: 40px !important;
+    line-height: 40px !important;
+      }
+      #mobile {
+    font-size: 13px !important;
+    letter-spacing: 0px;
+    padding: 10px !important;
+      }
+      .mobile-footer-logo {
+    max-width: 50% !important;
+      }
+      .mobile {
+    font-size: 13px !important;
+    letter-spacing: 0px;
+    padding: 10px !important;
+      }
+      .responsive-rating-table {
+    width: inherit !important;
+      }
+ =20
+  }
+
+  .responsive-rating-btn {
+       display: inline
+     }
+
+  @media screen and (max-width: 480px) {
+      .responsive-rating-btn {
+    display: table-row;
+      }
+      .responsive-topbox-item-480 {
+    width: 100% !important;
+    min-width: 100% !important;
+      }
+      .mobile-hide-topbox-item-480 {
+    display: none !important;
+      }
+      .mobile-topbox-padding-0-480 {
+    padding: 0px !important;
+      }
+      .mobile-topbox-padding-5-480 {
+    padding: 5px !important;
+      }
+      .mobile-topbox-padding-10-480 {
+    padding: 10px !important;
+      }
+      .mobile-topbox-padding-15-480 {
+    padding: 15px !important;
+      }
+      .mobile-topbox-padding-20-480 {
+    padding: 20px !important;
+      }
+      .mobile-topbox-padding-5-top-item-480 {
+    padding: 5px 5px 3px 5px !important;
+      }
+      .mobile-topbox-padding-10-top-item-480 {
+    padding: 10px 10px 5px 10px !important;
+      }
+      .mobile-topbox-padding-15-top-item-480 {
+    padding: 15px 15px 8px 15px !important;
+      }
+      .mobile-topbox-padding-20-top-item-480 {
+    padding: 20px 20px 10px 20px !important;
+      }
+      .mobile-topbox-padding-5-bottom-item-480 {
+    padding: 3px 5px 5px 5px !important;
+      }
+      .mobile-topbox-padding-10-bottom-item-480 {
+    padding: 5px 10px 10px 10px !important;
+      }
+      .mobile-topbox-padding-15-bottom-item-480 {
+    padding: 8px 15px 15px 15px !important;
+      }
+      .mobile-topbox-padding-20-bottom-item-480 {
+    padding: 10px 20px 20px 20px !important;
+      }
+      .mobile-hide {
+    display: none !important;
+      }
+      #mobile-hide {
+    display: none !important;
+      }
+      .headline {
+    font-size: 30px !important;
+    line-height: 36px !important;
+      }
+      .sup {
+    font-size: 18px !important;
+    line-height: 18px !important;
+      }
+      .logo {
+    width: 85px !important;
+    height: auto !important;
+      }
+      .bg {
+    padding-top: 30px !important;
+      }
+      .responsive-rating-table {
+    width: 100% !important;
+      }
+   =20
+  }
+
+  /* ANDROID CENTER FIX */
+  div[style*=3D"margin: 16px 0;"] { margin: 0 !important; }
+    </style></head><body style=3D"padding:0"><span style=3D"display:none =
+!important; visibility:hidden; mso-hide:all; font-size:1px; color:#ffffff; =
+line-height:1px; max-height:0px; max-width:0px; opacity:0; =
+overflow:hidden;">Will you help us cross the finish line by voting and =
+committing to becoming a volunteer?</span>
+<!-- CONTAINER TABLE -->
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+width=3D"100%"><tbody><tr><td align=3D"center" bgcolor=3D"#ffffff" =
+style=3D"padding: 5px 5% 50px 5%;">
+      <!--[if (gte mso 9)|(IE)]>
+      <table align=3D"center" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"600">
+        <tr>
+          <td align=3D"center" valign=3D"top" width=3D"600">
+      <![endif]-->
+      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+width=3D"100%" style=3D"max-width: 600px"><tbody><tr><td>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
+bsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
+</td></tr><tr><td align=3D"center" style=3D"color: #000000; font-family: =
+Helvetica, Arial, sans-serif; font-size: 18px; line-height: 24px; padding: =
+0px 0 0 0;">
+    <a href=3D"#" target=3D"_blank">
+      <img width=3D"280" alt=3D"" =
+src=3D"https://go.joebiden.com/page/-/Harris_Logo.png" =
+style=3D"padding-top:5px; padding-bottom:5px; width: 280px; =
+max-width:90%"></a>
+  </td>
+</tr><tr><td align=3D"left" style=3D"color: #000000; font-family: =
+Helvetica, Arial, sans-serif; font-size: 18px; line-height: 24px; padding: =
+10px 0 0 0;">
+<!--HEADER END --><p>
+	<!-- START BUILDER CODE --><!--[if (gte mso 9)|(IE)]>
+    <table align=3D"center" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"494">
+        <tr>
+            <td align=3D"left" valign=3D"top" width=3D"600">
+<![endif]--></p>
+<center>
+	<table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"max-width:494px; border-collapse: collapse;  width: 100%; =
+overflow:hidden"><tbody><tr><td align=3D"left" style=3D" padding: 0px 0px =
+0px 0px;">
+					<a href=3D"https://go.joebiden.com/page/m/2931aa46/1dad411a/102a6b99c=
+/35754c4d/4170878430/VEsH/?g=3D" target=3D"_blank" title=3D"https://iwillv=
+ote.com/?partner_campaign=3DJB_EM_IWV_2020.10.27_DO_ev_X__F1_S1_C1__ntl&am=
+p;partner=3Dbfp_org"><img alt=3D"Pete Buttigieg" =
+src=3D"https://go.joebiden.com/page/-/pete-headshot.png" style=3D"margin: =
+0; padding: 0; max-width:30%; display: block;font-family: Arial, =
+Helvetica, sans-serif; color: #000000; font-size: 18px; border-style:none; =
+" title=3D"" width=3D"235"></a></td>
+			</tr></tbody></table></center>
+<!--[if (gte mso 9)|(IE)]>
+            </td>
+        </tr>
+    </table>
+<![endif]--><!-- END BUILDER CODE -->
+<p>
+	Folks,</p>
+<p>
+	At this moment, our country is making a choice. Americans across the =
+nation are choosing between unity and division. We're choosing between =
+hope and fear.</p>
+<p>
+	I choose unity and hope. I choose Joe Biden and Kamala Harris.</p>
+<p>
+	The Biden-Harris administration will get this virus under control, build =
+back a better economy, bring our country together, and deliver a brighter =
+future. And that's not all: we can count on Joe and Kamala to restore =
+values like decency, honesty, fairness, and equality to the White =
+House.</p>
+<p>
+	Countless people from different backgrounds and with different beliefs =
+are coming together to choose Joe and Kamala because we need real =
+leadership at a moment like this. There's just so much at stake -- health =
+care, racial justice, climate, reproductive rights, and LGBTQ+ equality, =
+and more are on the ballot.</p>
+<p>
+	<b>I'm proud to support Joe and Kamala, and today I'm asking you to help =
+propel them to victory. Folks, will you commit to making your voice heard =
+and vote as soon as you can?</b></p>
+<center>
+	<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"responsive-table" style=3D"max-width: 100%" =
+width=3D"600"><tbody><tr><td align=3D"center" class=3D"responsive-table" =
+style=3D"padding:5px">
+					<!-- START  BUTTON -->
+					<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"responsive-table" height=3D"59" width=3D"360"><tbody><tr><td =
+align=3D"center" bgcolor=3D"#233f94" class=3D"responsive-table-button" =
+height=3D"59" style=3D" -webkit-border-radius:5px; border-radius:5px; =
+border:0px solid null; border-bottom:4px solid #141455; min-width:360px; =
+max-width:360px;" width=3D"360">
+									<a class=3D"mobile-font-18 Blue-Button-btn" height=3D"59" =
+href=3D"https://go.joebiden.com/page/m/2931aa46/1dad411a/102a6b99c/35754c4=
+d/4170878430/VEsE/?g=3D" style=3D"padding: 13px; display: block; =
+font-size: 21px; font-family:Avenir, Arial, sans-serif; font-weight: 700; =
+font-style:normal; color:#ffffff; letter-spacing: 0em; =
+text-decoration:none; line-height:33px;" target=3D"_blank" =
+title=3D"https://iwillvote.com/?partner_campaign=3DJB_EM_IWV_2020.10.27_DO=
+_ev_X__F1_S1_C1__ntl&amp;partner=3Dbfp_org">I WILL =
+VOTE&nbsp;=E2=9E=9E</a></td>
+							</tr></tbody></table><!-- END BUTTON --></td>
+			</tr><tr><!-- END BUTTON --></tr></tbody></table></center>
+<!--  SUBURBAN BUTTON GROUP END -->
+<p>
+	When we stand together, we can accomplish anything, and I'm so grateful =
+you're in this fight standing with us for a brighter future.</p>
+<p>
+	Let's do this!</p>
+<p>
+	Pete Buttigieg</p>
+<p>
+	<b>P.S. We need all hands on deck so we can win. <a href=3D"https://go.jo=
+ebiden.com/page/m/2931aa46/1dad411a/102a6b99c/35754c4c/4170878430/VEsF/?g=
+=3D" title=3D"https://joebiden.com/take-action/?source=3DJB_EM_IWV_2020.10=
+.27_DO_ev_X__F1_S1_C1__ntl">Click here to sign up to volunteer =
+&gt;&gt;</a></b></p><!--FOOTER -->
+
+          </td>
+        </tr></tbody></table><!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]--></td>
+  </tr><tr><td align=3D"center" bgcolor=3D"#ffffff" style=3D"padding: 20px =
+5% 70px 5%; border-top: solid 2px #e4e9ee">
+      <!--[if (gte mso 9)|(IE)]>
+      <table align=3D"center" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"100%">
+        <tr>
+          <td align=3D"center" valign=3D"top" width=3D"100%">
+      <![endif]-->
+      <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+width=3D"100%" style=3D"max-width: 600px;"><tbody><!-- START ADDRESS =
+--><tr><td align=3D"center" valign=3D"middle" style=3D"font-size: 14px; =
+line-height: 18px; color:#000000;  padding-top: 15px; padding-bottom: =
+25px; font-family: Helvetica,Verdana, Geneva, sans-serif;">
+            <div style=3D"width:100%; max-width:600px;" =
+width=3D"600"><table><tbody><tr><td class=3D"social" =
+align=3D"center">&nbsp; <a class=3D"social-icon" style=3D"color: #ababab; =
+text-decoration: underline; font-weight: normal; display: inline-block; =
+padding: 0 2px;" href=3D"https://go.joebiden.com/page/m/2931aa46/1dad411a/=
+102a6b99c/35754c4b/4170878430/VEsC/?g=3D" target=3D"_blank" =
+title=3D"https://www.facebook.com/joebiden"> <img style=3D"outline: none; =
+text-decoration: none; -ms-interpolation-mode: bicubic; display: block; =
+border: none;" src=3D"https://go.joebiden.com/page/-/email/facebook.png" =
+alt=3D"" width=3D"40"></a>&nbsp; &nbsp; <a class=3D"social-icon" =
+style=3D"color: #ababab; text-decoration: underline; font-weight: normal; =
+display: inline-block; padding: 0 2px;" href=3D"https://go.joebiden.com/pa=
+ge/m/2931aa46/1dad411a/102a6b99c/35754c4a/4170878430/VEsD/?g=3D" =
+target=3D"_blank" title=3D"https://twitter.com/joebiden"> <img =
+style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: =
+bicubic; display: block; border: none;" =
+src=3D"https://go.joebiden.com/page/-/email/twitter.png" alt=3D"" =
+width=3D"40"></a>&nbsp; &nbsp; <a class=3D"social-icon" style=3D"color: =
+#ababab; text-decoration: underline; font-weight: normal; display: =
+inline-block; padding: 0 2px;" href=3D"https://go.joebiden.com/page/m/2931=
+aa46/1dad411a/102a6b99c/35754c49/4170878430/VEsA/?g=3D" target=3D"_blank" =
+title=3D"https://www.youtube.com/joebiden"> <img style=3D"outline: none; =
+text-decoration: none; -ms-interpolation-mode: bicubic; display: block; =
+border: none;" src=3D"https://go.joebiden.com/page/-/email/youtube.png" =
+alt=3D"" width=3D"40"></a>&nbsp; &nbsp; <a class=3D"social-icon" =
+style=3D"color: #ababab; text-decoration: underline; font-weight: normal; =
+display: inline-block; padding: 0 2px;" href=3D"https://go.joebiden.com/pa=
+ge/m/2931aa46/1dad411a/102a6b99c/35754c48/4170878430/VEsB/?g=3D" =
+target=3D"_blank" title=3D"https://www.instagram.com/joebiden"> <img =
+style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: =
+bicubic; display: block; border: none;" =
+src=3D"https://go.joebiden.com/page/-/email/instagram.png" alt=3D"" =
+width=3D"40"></a>&nbsp; &nbsp;</td>
+</tr></tbody></table><br><span style=3D"font-family: Helvetica,arial, =
+sans-serif;">
+Has the pandemic affected you personally, or do you just want to take a =
+break from emails for a couple weeks? We understand. <a =
+href=3D"https://go.joebiden.com/page/m/2931aa46/1dad411a/102a6b99c/35754c4=
+7/4170878430/VEsO/?g=3D" style=3D"color: #233F94; text-decoration: =
+underline" title=3D"https://go.joebiden.com/page/s/Take-a-Break?source=3Df=
+ooter"><b>Click here to pause emails from the campaign for a two week =
+period.</b></a></span></div></td>
+</tr></tbody></table><!--  FUNDRAISING BUTTON GROUP END --><br><span =
+style=3D"font-family: Helvetica,arial, sans-serif;">If you&rsquo;d like to =
+unsubscribe from our emails, you can <a style=3D"color: #233f94; =
+text-decoration: underline;" href=3D"https://go.joebiden.com/page/m/2931aa=
+46/1dad411a/102a6b99c/35754c46/4170878430/VEsP/?g=3D" target=3D"_blank" =
+title=3D"https://go.joebiden.com/page/content/Unsubscribe">click here</a>. =
+</span>
+          </td>
+        </tr><!--  END ADDRESS --><!--  START PAID FOR --><tr><td =
+align=3D"center">
+            <div style=3D"font-family: Helvetica,Verdana, Geneva, =
+sans-serif; border-color: #000000; border-style: solid; border-width: 1px; =
+padding: 7px; width:90%; max-width:600px; font-size: 14px; line-height: =
+18px; color:#000000; font-family: helvetica, Verdana, Geneva, =
+sans-serif;">
+              <span style=3D"font-family: Helvetica,arial, =
+sans-serif;">Paid for by Biden for President</span>
+            </div>
+          </td>
+        </tr><!-- END PAID FOR --><!-- START BOTTOM TEXT --><tr><td =
+align=3D"center" style=3D"font-size: 14px; line-height: 18px; =
+color:#000000; padding-top: 25px; font-family: helvetica, Verdana, Geneva, =
+sans-serif;">  =20
+            <div style=3D"width:100%; max-width:600px;" =
+width=3D"600"></div>
+          </td>
+        </tr><!-- END BOTTOM TEXT --></tbody></table><!--[if (gte mso =
+9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]--><img src=3D"https://go.joebiden.com/page/o/2931aa46/1dad=
+411a/102a6b99c/35754c45/4170878430/open.gif" width=3D"1" =
+height=3D"1"></body></html>
+<!--FOOTER END -->
+
+
+
+--b1_c22c5ae5e5ef11b710296b7554a49c6b--
+
+
